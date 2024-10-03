@@ -1,3 +1,5 @@
+import { Sequence, ScheduleDelay } from 'src/types';
+
 export const _id = (index: number) => `e99f09a7-dd88-49d5-b1c8-1daf80c2d7b${index}`;
 
 export const _times = (index: number) =>
@@ -230,3 +232,28 @@ export const _productNames = (index: number) =>
     'Nike React Art3mis',
     'Nike React Infinity Run Flyknit A.I.R. Chaz Bear',
   ][index];
+
+export const _sequences: Sequence[] = [
+  {
+    id: '1',
+    title: 'Welcome Sequence',
+    steps: [
+      { content: 'Welcome to our platform!', emailType: 'openingEmail' },
+      { content: 'We hope you enjoy our service. This is a follow-up email.', emailType: 'followUpEmail', scheduleDelay: ScheduleDelay.THREE_DAYS },
+      { content: 'Thanks for your reply! Here’s the next step.', emailType: 'replyEmail', scheduleDelay: ScheduleDelay.ONE_DAY }
+    ],
+    createdAt: '2024-01-01',
+    updatedAt: '2024-01-02',
+  },
+  {
+    id: '2',
+    title: 'Reminder Sequence',
+    steps: [
+      { content: 'Did you receive our last email?', emailType: 'openingEmail' },
+      { content: 'Just following up on our previous message.', emailType: 'followUpEmail', scheduleDelay: ScheduleDelay.ONE_WEEK },
+      { content: 'Thanks for responding. Here is more information.', emailType: 'replyEmail', scheduleDelay: ScheduleDelay.THREE_DAYS }
+    ],
+    createdAt: '2024-02-01',
+    updatedAt: '2024-02-03',
+  }
+];

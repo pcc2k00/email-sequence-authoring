@@ -34,6 +34,11 @@ export const navData = [
     icon: icon('ic-blog'),
   },
   {
+    title: 'Email Sequences',   // New item for Email Sequences
+    path: '/email-sequences',   // Route path for the email sequences screen
+    icon: icon('ic-email'),     // Use an appropriate icon, add the 'ic-email.svg' to your icons folder
+  },
+  {
     title: 'Sign in',
     path: '/sign-in',
     icon: icon('ic-lock'),
