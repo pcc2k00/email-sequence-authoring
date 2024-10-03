@@ -74,4 +74,3 @@ The design was chosen to satisfy the key requirements:
 - Error handling to ensure users fill in all necessary fields before saving.
   
 The design ensures simplicity while still allowing for potential future enhancements, such as dynamic content generation and scheduling workflows.
-"""
